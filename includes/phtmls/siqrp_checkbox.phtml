@@ -1,0 +1,20 @@
+<div class="siqrp_form_row siqrp_form_checkbox <?php echo $class; ?>">
+<?php if ( isset( $siqrp_args['template_type'] ) && 'right-aligned-checkbox' === $siqrp_args['template_type'] ) { ?>
+	<div class="siqrp_form_label">
+		<?php echo $desc; ?>
+	</div>&nbsp;
+<?php } ?>
+	<div scope="row">
+		<input
+			type="checkbox"
+			name="<?php echo $option; ?>"
+			id="siqrp-<?php echo $option; ?>"
+			value="true"
+			<?php checked( ( isset( $siqrp_args['option_value'] ) ) ? $siqrp_args['option_value'] : siqrp_get_option( $option ) ); ?>
+			<?php echo ( isset( $siqrp_args['disabled_checkbox'] ) ) ? $siqrp_args['disabled_checkbox'] : ''; ?>
+		/>
+		<?php if ( ! isset( $siqrp_args['template_type'] ) || 'right-aligned-checkbox' !== $siqrp_args['template_type'] ) { ?>
+			<label for="siqrp-<?php echo $option; ?>"><?php echo $desc; ?></label>
+		<?php } ?>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.ss-content-wrapper *{font-family: 'Inter', sans-serif;margin: 0;padding: 0;list-style-type: none;}
+.ss-content-wrapper .ss-content-header{padding: 0;margin: 0;display: flex;align-items: baseline;}
+.ss-content-wrapper .ss-header-title{text-align: center;font-size: 18px;line-height: 22px;padding: 0;margin: 0;color: #333; border: none;font-family: 'Inter', sans-serif;font-weight: 700;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.ss-header-poweredby{margin-left: auto;font-size: 11px;color: #777;}
+.ss-header-poweredby a{text-decoration: none;color: #222;}
+.ss-content-wrapper .ss-list-container, .ss-content-wrapper .ss-list-container ol{padding: 10px 0;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;display: -webkit-flex; display: flex;-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-flow: row wrap;flex-direction: column;gap: 10px; width: 100%;}
+.ss-content-wrapper .ss-list-colm, .ss-content-wrapper .ss-list-container ol li{flex: 1;width: 100%; margin: 0;}
+.ss-content-wrapper .ss-list-colm::before,
+.ss-content-wrapper .ss-list-container ol li::before{ display: none;}
+.ss-content-wrapper .ss-list-colm a{text-decoration: none; margin: 0;padding:0;}
+.ss-content-wrapper .ss-list-colm a:hover{opacity: .95;}
+.ss-content-wrapper .ss-list-colm-container{display: flex;min-height: 60px;}
+.ss-content-wrapper .ss-list-colm-placeholder{margin:0 15px 0 0;padding: 0;line-height: 16px;overflow: hidden;height: 62px; display: flex;align-items: center;justify-content: center;position: relative;background-color:#f4f4f4;flex: 0 0 110px;width: 110px;}
+.ss-content-wrapper .ss-list-colm-placeholder.ss-no-img{background:#f4f4f4 url(../images/default-thumbnail.png) no-repeat center center;background-size: 40%;}
+.ss-content-wrapper .ss-list-colm-placeholder img{max-width: 100%;display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+.ss-content-wrapper .ss-list-colm-title a{text-decoration: none;color: #3e3e3e;padding: 0;margin: 0;display: block;border: none;text-decoration: none;border: 0;}
+.ss-content-wrapper .ss-list-colm-title{font-size: 18px; line-height: 24px;color: #000;margin: 0;color: #3e3e3e;text-align: left;font-family: 'Inter', serif;font-weight: 500; letter-spacing: 0;padding: 2px 15px 2px 0;margin: 0;}
+.ss-content-wrapper .ss-list-colm-title:hover{color: #555;text-decoration: none;}
+.ss-content-wrapper .ss-list-colm-content{flex: 1; display: flex;align-items: center;}
+.ss-content-wrapper .ss-list-goto-arrow{margin: 0 5px 0 auto;}
+.ss-content-wrapper .ss-list-goto-arrow svg{display: block;}
+
+.siqrp-template-minimal .ss-content-wrapper .ss-list-colm-container{min-height: 40px; border-top: 1px solid #f7f7f7;}
+.siqrp-template-minimal .ss-content-wrapper .ss-list-container ol{ border-bottom: 1px solid #f7f7f7; padding-bottom: 0; }
+.siqrp-template-minimal .ss-content-wrapper .ss-list-colm-placeholder{height: 40px; display: flex;flex: 0 0 30px;width: 30px; color: #9c9c9c; background: none; margin-right: 10px; }
+
+
+@media only  screen and (max-width: 767px){
+.ss-content-wrapper .ss-list-container {flex-direction: column;gap: 20px;}
+.ss-content-wrapper .ss-list-colm-title {font-size: 16px;line-height: 24px;}
+}

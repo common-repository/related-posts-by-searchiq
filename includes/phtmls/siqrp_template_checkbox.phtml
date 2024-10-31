@@ -1,0 +1,27 @@
+<?php
+	$customHelp = null;
+?>
+
+<div class="siqrp_form_row <?php echo $class; ?>"><b><?php _e( 'Theme:', 'related-posts-by-searchiq' ); ?></b></div>
+<div class="siqrp_form_row <?php echo $class; ?>"><?php _e('Use one of these options to select the layout you want for your related posts.', 'related-posts-by-searchiq'); ?></div>
+<div class="siqrp_form_row siqrp_form_template_buttons <?php echo $class; ?>">
+	<div data-value="list" class="siqrp_template_button <?php echo $builtin; ?>">
+		<div class="image"></div>
+		<div class="label"><?php _e( 'List', 'related-posts-by-searchiq' ); ?></div>
+	</div>
+
+	<div
+		data-value="grid"
+		class="siqrp_template_button <?php echo $thumbnails; ?> <?php echo $diagPostThumbs; ?>">
+		<div class="image size-<?php echo siqrp_get_option('limit');?>"></div>
+		<div class="label"><?php _e( 'Grid', 'related-posts-by-searchiq' ); ?></div>
+	</div>
+	
+	<input
+		type="hidden"
+		name="<?php echo $pre; ?>use_template"
+		id="siqrp-<?php echo $pre; ?>use_template"
+		class="use_template" value="<?php echo $choice; ?>"
+	/>
+
+</div>

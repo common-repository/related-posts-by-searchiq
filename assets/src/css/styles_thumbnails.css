@@ -1,0 +1,21 @@
+.siqrp-thumbnails-horizontal .siqrp-thumbnail, .siqrp-thumbnail-default, .siqrp-thumbnail-title {
+	display: inline-block;
+}
+.siqrp-thumbnails-horizontal .siqrp-thumbnail {
+	border: 1px solid rgba(127,127,127,0.1);
+	vertical-align: top;
+}
+.siqrp-thumbnails-horizontal .siqrp-thumbnail > img, .siqrp-thumbnails-horizontal .siqrp-thumbnail-default {
+	display: block;
+}
+.siqrp-thumbnails-horizontal .siqrp-thumbnail-title {
+	font-size: 1em;
+	max-height: 2.8em;
+	line-height: 1.4em;
+	text-decoration: inherit;
+	overflow: hidden;
+}
+
+.siqrp-thumbnail-default {
+	overflow: hidden;
+}

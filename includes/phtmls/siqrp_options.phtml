@@ -1,0 +1,72 @@
+<div class="wrap">
+	<?php require SIQRP_BASE_DIR . '/includes/phtmls/siqrp_settings_header.phtml'; ?>
+
+	<?php if(empty($this->core->sid) || isset($_GET['edit_sid'])): ?>
+		<form method="post">
+			<div id="poststuff" class="metabox-holder has-right-sidebar">
+				<!-- Side column -->
+				<div class="inner-sidebar" id="side-info-column">
+					<?php do_meta_boxes( 'toplevel_page_siqrp', 'side', array() ); ?>
+				</div>
+				
+				<div id="post-body-content">
+					<?php do_meta_boxes('siqrp_display_sid_form', 'normal', array()); ?>
+				</div>
+
+				
+			</div>
+		</form>
+	<?php else: ?>
+	<form method="post">
+
+		<div id="poststuff" class="metabox-holder has-right-sidebar">
+
+			<?php if ( ! $siqrp->get_option( 'rss_display' ) ) : ?>
+				<style>
+					.rss_displayed {
+						display: none;
+					}
+				</style>
+			<?php endif ?>
+
+			<!-- Side column -->
+			<div class="inner-sidebar" id="side-info-column">
+				<?php do_meta_boxes( 'toplevel_page_siqrp', 'side', array() ); ?>
+			</div>
+
+			<!-- Main Content -->
+
+			<div id="post-body-content">
+				<?php do_meta_boxes( 'toplevel_page_siqrp', 'normal', array() ); ?>
+			</div>
+
+			<script>
+				var spinner = '<?php echo esc_url( plugins_url( 'assets/images/spinner-2x.gif', SIQRP_BASE_FILE ) ); ?>',
+					loading = '<img height="20px" width="20px" class="loading" src="'+spinner+'" alt="loading..."/>';
+			</script>
+
+			<div>
+				<input type="submit" class='button-primary siqrp_spin_on_click' name="update_siqrp" value="<?php _e( 'Save Changes', 'related-posts-by-searchiq' ); ?>" />
+								<span class="spinner siqrp-no-float"></span>
+				<?php wp_nonce_field( 'update_siqrp', 'update_siqrp-nonce' ); ?>
+			</div>
+			<br><br>
+			<div class="" id="display_notices" style="display: none;">
+			</div>
+			<?php /* ?>
+			<div>
+				<p>
+					<input type="button" name="siqrp-clear-cache" id="siqrp-clear-cache" class="button-secondary" value="<?php _e( 'Empty cache', 'related-posts-by-searchiq' ); ?>">
+					<span id="siqrp-clear-cache-label"><small><?php _e( 'Use this button to manually clear SIQRP cache', 'related-posts-by-searchiq' ); ?></small></span>
+					<span class="spinner" style="float: none;"></span>
+				</p>
+				<?php wp_nonce_field( 'clear_cache_siqrp', 'clear_cache-nonce' ); ?>
+			</div>
+			<?php */ ?>
+
+		</div>
+
+	</form>
+
+	<?php endif; ?>
+</div>
